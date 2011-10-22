@@ -7,11 +7,45 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="topbar-wrapper" style="z-index: 5;">
+    <div class="topbar" data-dropdown="dropdown">
+      <div class="topbar-inner">
+        <div class="container">
+          <h3><a href="/">Cyclic</a></h3>
+          <% if user_signed_in? %>
+            <ul class="nav">
+              <li><a href="#">Rides</a></li>
+            </ul>
+            <ul class="nav secondary-nav">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle">My Cyclic</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">My Profile</a></li>
+                  <li class="divider"></li>
+                  <li><%= link_to 'Logout', destroy_user_session_path %></li>
+                </ul>
+              </li>
+            </ul>
+          <% end %>
+          <% if !(user_signed_in?)  %>
+            <ul class="nav secondary-nav">
+              <li><%= link_to 'Login', new_user_session_path %></li>
+            </ul>
+          <% end %>
+        </div>
+      </div><!-- /topbar-inner -->
+    </div><!-- /topbar -->
+  </div>
 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+  <div class="container">
+    <% if notice %>
+      <div class="alert-message warning"><%= notice %></div>
+    <% end %>
+    <% if alert %>
+      <div class="alert-message error"><%= alert %></div>
+    <% end %>
 
-<%= yield %>
-
+    <%= yield %>
+  </div>
 </body>
 </html>
