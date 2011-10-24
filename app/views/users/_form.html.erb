@@ -1,0 +1,19 @@
+<%= form_for @user do |f| %>
+  <fieldset>
+    <legend>Person Details</legend>
+    <%= f.twitter_text_field :email %>
+  </fieldset>
+  <div class="actions">
+    <%= f.submit 'Update Personal Details', class: 'btn primary' %>
+  </div>
+<% end %>
+<%= form_for @user do |f| %>
+  <fieldset>
+    <legend>Change Password</legend>
+    <%= f.twitter_password_field :password %>
+    <%= f.twitter_password_field :password_confirmation %>
+  </fieldset>
+  <div class="actions">
+    <%= f.submit 'Change Password', class: 'btn primary' %>
+  </div>
+<% end %>
