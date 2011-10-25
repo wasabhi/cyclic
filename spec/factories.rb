@@ -9,6 +9,7 @@ FactoryGirl.define do
 
   factory :user do
     email { Factory.next :email }
+    name { Faker::Name.name }
     password 'password'
     password_confirmation { |u| u.password }
     
