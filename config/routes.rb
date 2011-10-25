@@ -1,4 +1,6 @@
 Cyclic::Application.routes.draw do
+  resources :accounts
+
   get "dashboard/index"
 
   devise_for :users

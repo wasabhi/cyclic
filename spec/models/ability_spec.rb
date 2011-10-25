@@ -19,4 +19,13 @@ describe Ability do
   specify "a user should not be able to manage another user" do
     subject.can?(:manage, FactoryGirl.create(:user)).should be_false
   end
+
+  specify "a user can manage their own account" do
+    subject.can?(:manage, @user.account).should be_true
+  end
+
+  specify "a user cannot manage another account" do
+    user = FactoryGirl.create :user
+    subject.can?(:manage, user.account).should be_false
+  end
 end
