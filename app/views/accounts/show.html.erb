@@ -1,10 +1,5 @@
-<p id="notice"><%= notice %></p>
+<h1><%= @account %></h1>
 
-<p>
-  <b>Name:</b>
-  <%= @account.name %>
-</p>
-
-
-<%= link_to 'Edit', edit_account_path(@account) %> |
-<%= link_to 'Back', accounts_path %>
+<div class="actions">
+  <%= link_to 'Edit', edit_account_path(@account), :class => 'btn primary' %>
+</div>

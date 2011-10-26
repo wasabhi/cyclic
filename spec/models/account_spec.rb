@@ -11,4 +11,8 @@ describe Account do
     subject.name = account.name
     subject.should_not be_valid
   end
+
+  it "should respond to to_s with name" do
+    subject.to_s.should == subject.name
+  end
 end
