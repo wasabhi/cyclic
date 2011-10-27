@@ -1,0 +1,102 @@
+body {
+  padding-top: 53px;
+}
+
+.modal form {
+  margin: 0;
+}
+
+form div.input div.field_with_errors {
+  display: inline;
+}
+
+form div.error div.field_with_errors label {
+  color: #9d261d;
+}
+
+table tr td {
+  cursor: pointer;
+}
+
+address {
+  font-size: 1.1em;
+}
+
+.login {
+  position: static;
+  margin: 6em auto;
+}
+
+.hidden {
+  display: none;
+}
+
+div.error.base {
+  margin-bottom: 2em !important;
+  color: #9D261D;
+}
+
+.faq-answer {
+  font-size: 1.1em
+}
+
+.autocomplete {
+  position: relative;
+  z-index: 1000;
+}
+
+.topbar .autocomplete {
+  z-index: 10000;
+}
+
+.graph table, table.drop-bootstrap {
+  width: auto;
+  border: none;
+
+  tr {
+    td, th {
+      border: none;
+      padding: 5px;
+      cursor: auto;
+    }
+  }
+}
+
+div.big {
+  
+  &.number, &.date {
+    margin: 5px;
+    border-top: 1px solid #ccc;
+    padding-top: 5px;
+
+    &:first-child {
+      border-top: none;
+    }
+
+    strong {
+      display: block;
+      text-align: center;
+      font-size: 3em;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+
+  &.date {
+    strong {
+      font-size: 2em;
+      line-height: 1.5em;
+    }
+  }
+}
+
+a[target="_blank"]:after {
+  content: ' (opens in a new window)';
+}
+
+// fix padding on topbar logo link
+.topbar h3 a {
+  padding: 4px;
+}
