@@ -25,4 +25,21 @@ class AccountsController < ApplicationController
       end
     end
   end
+
+  def invite
+    @user = User.new
+  end
+
+  def send_invite
+    @user = User.new
+    @user.email = params[:user][:email]
+    @user.password = @user.password_confirmation = Devise.friendly_token
+    @user.account = @account
+    if @user.save
+      redirect_to invite_account_url(@account), :notice => "#{@user.email} has been invited and should a confirmation email."
+    else
+      render :invite
+    end
+  end
+    
 end

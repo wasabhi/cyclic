@@ -1,5 +1,11 @@
 Cyclic::Application.routes.draw do
-  resources :accounts
+  resources :accounts do
+    member do
+      get 'invite'
+      post 'send_invite'
+    end
+  end
+
 
   get "dashboard/index"
 

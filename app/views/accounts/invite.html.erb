@@ -1,0 +1,9 @@
+<h2>Invite someone to join you at <%= @account %></h2>
+<%= form_for @user, :url => send_invite_account_path(@account) do |f| %>
+  <fieldset>
+    <%= f.twitter_email_field :email %>
+  </fieldset>
+  <div class="actions">
+    <%= f.submit 'Send Invite', class: "btn primary" %>
+  </div>
+<% end %>

@@ -80,6 +80,20 @@ describe AccountsController do
         end
       end
     end
+
+    describe "when I invite a user" do
+      it "should let me send an invite to a new user" do
+        get :invite, :id => @user.account.to_param
+        assigns(:account).should == @user.account
+        response.should be_success
+      end
+
+      it "should send an email" do
+        expect {
+          post :send_invite, :id => @user.account.to_param, :user => { :email => 'new@user.com' }
+        }.to change{ ActionMailer::Base.deliveries.count }.by(1)
+      end
+    end
   end
 
 end
