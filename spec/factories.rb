@@ -16,4 +16,11 @@ FactoryGirl.define do
     after_create { |u| u.confirm! }
     account
   end
+
+  factory :ride do
+    name { Faker::Name.name }
+    length 4.2
+    date Date.today
+    user
+  end
 end

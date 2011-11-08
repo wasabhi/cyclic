@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @ride.name %>
+</p>
+
+<p>
+  <b>Favourite:</b>
+  <%= @ride.favourite %>
+</p>
+
+<p>
+  <b>Length:</b>
+  <%= @ride.length %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @ride.date %>
+</p>
+
+
+<%= link_to 'Edit', edit_ride_path(@ride) %> |
+<%= link_to 'Back', rides_path %>

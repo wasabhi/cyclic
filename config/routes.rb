@@ -1,4 +1,6 @@
 Cyclic::Application.routes.draw do
+  resources :rides
+
   resources :accounts do
     member do
       get 'invite'
