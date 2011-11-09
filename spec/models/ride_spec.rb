@@ -5,5 +5,5 @@ describe Ride do
 
   it { should belong_to :user }
   it { should validate_presence_of :date }
-  it { should validate_presence_of :length }
+  it { should validate_presence_of :distance }
 end

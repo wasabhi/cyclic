@@ -19,7 +19,7 @@ FactoryGirl.define do
 
   factory :ride do
     name { Faker::Name.name }
-    length 4.2
+    distance 4.2
     date Date.today
     user
   end

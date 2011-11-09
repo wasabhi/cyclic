@@ -5,7 +5,7 @@ describe "rides/edit.html.erb" do
     @ride = assign(:ride, stub_model(Ride,
       :name => "MyString",
       :favourite => false,
-      :length => "9.99"
+      :distance => "9.99"
     ))
   end
 
@@ -16,7 +16,7 @@ describe "rides/edit.html.erb" do
     assert_select "form", :action => rides_path(@ride), :method => "post" do
       assert_select "input#ride_name", :name => "ride[name]"
       assert_select "input#ride_favourite", :name => "ride[favourite]"
-      assert_select "input#ride_length", :name => "ride[length]"
+      assert_select "input#ride_distance", :name => "ride[distance]"
     end
   end
 end

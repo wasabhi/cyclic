@@ -5,7 +5,7 @@ describe "rides/show.html.erb" do
     @ride = assign(:ride, stub_model(Ride,
       :name => "Name",
       :favourite => false,
-      :length => "9.99"
+      :distance => "9.99"
     ))
   end
 

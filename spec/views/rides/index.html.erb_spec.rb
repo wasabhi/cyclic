@@ -6,12 +6,12 @@ describe "rides/index.html.erb" do
       stub_model(Ride,
         :name => "Name",
         :favourite => false,
-        :length => "9.99"
+        :distance => "9.99"
       ),
       stub_model(Ride,
         :name => "Name",
         :favourite => false,
-        :length => "9.99"
+        :distance => "9.99"
       )
     ])
   end
